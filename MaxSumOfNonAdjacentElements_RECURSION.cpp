@@ -5,7 +5,7 @@ int f(int ind,vector<int>&nums){
     }
     int Take = 0,NotTake = 0;
     if(ind>1) Take = nums[ind]+f(ind-2,nums);
-    NotTake = 0 +f(ind,nums);
+    NotTake = 0 +f(ind-1,nums);
     return max(Take,NotTake);
 }
 int maximumNonAdjacentSum(vector<int> &nums){
